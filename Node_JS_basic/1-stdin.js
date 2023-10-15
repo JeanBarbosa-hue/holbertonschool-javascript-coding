@@ -1,22 +1,21 @@
 console.log('Welcome to Holberton School, what is your name?');
 
+// await input
 process.stdin.resume();
 
-process.stdin.on('readable', () => {
-  const name = process.stdin.read();
-  if (name !== null) {
-    process.stdout.write(`Your name is: ${name}`);
-    
-    if (process.stdin.isTTY) {
-      process.exit(0); // Exit with success status
-    } else {
-      process.stdout.write('This important software is now closing\n');
-      process.exit(0); // Exit with success status
-    }
-  }
-});
+// Define a variable to store user input
+let name = '';
 
-process.stdin.on('error', (err) => {
-  console.error('An error occurred:', err);
-  process.exit(1); // Exit with an error status
+// Once input is entered
+process.stdin.on('data', (data) => {
+  name += data.toString().trim();
+  process.stdout.write(`Your name is: ${name}\n`);
+  
+  // Check if input is coming from the terminal
+  if (process.stdin.isTTY) {
+    process.exit();
+  } else {
+    process.stdout.write('This important software is now closing\n');
+    process.exit();
+  }
 });
