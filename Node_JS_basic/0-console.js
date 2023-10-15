@@ -1,9 +1,6 @@
-#!/usr/bin/node
-/* print message */
-
-function displayMessage(message) {
-  /* print message */
-console.log(message);
+/* eslint-disable */
+function displayMessage(string) {
+  console.log(string);
 }
 
 module.exports = displayMessage;
