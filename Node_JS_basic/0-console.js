@@ -3,7 +3,7 @@
 
 function displayMessage(message) {
   /* print message */
-  console.log(message);
+console.log(message);
 }
 
 module.exports = displayMessage;
