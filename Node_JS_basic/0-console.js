@@ -2,8 +2,8 @@
 /* print message */
 
 function displayMessage(message) {
-    /* print message */
-    console.log(message);
-  }
-  
-  module.exports = displayMessage;
+  /* print message */
+  console.log(message);
+}
+
+module.exports = displayMessage;
